@@ -110,6 +110,7 @@ namespace vASEK3_4
                     for (int j = 0; j < 10; j++)
                     {
                         Direct[i] = Direct[i].Replace(number[j],bukv[j]);
+                    }
                         //Direct[i] = Direct[i].Replace('0', 'A');
                         //Direct[i] = Direct[i].Replace('1', 'B');
                         //Direct[i] = Direct[i].Replace('2', 'C');
@@ -120,7 +121,6 @@ namespace vASEK3_4
                         //Direct[i] = Direct[i].Replace('7', 'H');
                         //Direct[i] = Direct[i].Replace('8', 'I');
                         //Direct[i] = Direct[i].Replace('9', 'J');
-                    }
                 }
             }
             string buff = Direct[1];
