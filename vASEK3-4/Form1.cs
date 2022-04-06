@@ -89,7 +89,8 @@ namespace vASEK3_4
             string[] Direct = path.Split(new char[] { '\\' });
             string[] DirectDel = path.Split(new char[] { '\\' });
             int n = 0;
-            char[] number = new char[10] { '0', '1', '2', '3', '4', '5', '6','7','8','9' };
+            char[] number = new char[10] { '0', '1', '2', '3', '4', '5', '6', '7', '8','9' };
+            char[] bukv = new char[10] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J' };
             int DirNumb = 0;
             string CreateSubPath = "";
             foreach (string s in Direct)
@@ -106,16 +107,20 @@ namespace vASEK3_4
                 if (ch != -1)
                 {
                     DirNumb++;
-                    Direct[i] = Direct[i].Replace('0','A');
-                    Direct[i] = Direct[i].Replace('1', 'B');
-                    Direct[i] = Direct[i].Replace('2', 'C');
-                    Direct[i] = Direct[i].Replace('3', 'D');
-                    Direct[i] = Direct[i].Replace('4', 'E');
-                    Direct[i] = Direct[i].Replace('5', 'F');
-                    Direct[i] = Direct[i].Replace('6', 'G');
-                    Direct[i] = Direct[i].Replace('7', 'H');
-                    Direct[i] = Direct[i].Replace('8', 'I');
-                    Direct[i] = Direct[i].Replace('9', 'J');
+                    for (int j = 0; j < 10; j++)
+                    {
+                        Direct[i] = Direct[i].Replace(number[j],bukv[j]);
+                        //Direct[i] = Direct[i].Replace('0', 'A');
+                        //Direct[i] = Direct[i].Replace('1', 'B');
+                        //Direct[i] = Direct[i].Replace('2', 'C');
+                        //Direct[i] = Direct[i].Replace('3', 'D');
+                        //Direct[i] = Direct[i].Replace('4', 'E');
+                        //Direct[i] = Direct[i].Replace('5', 'F');
+                        //Direct[i] = Direct[i].Replace('6', 'G');
+                        //Direct[i] = Direct[i].Replace('7', 'H');
+                        //Direct[i] = Direct[i].Replace('8', 'I');
+                        //Direct[i] = Direct[i].Replace('9', 'J');
+                    }
                 }
             }
             string buff = Direct[1];
